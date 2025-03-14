@@ -1,6 +1,15 @@
 #include "Human.h"
 #include "Move.h"
 #include <iostream>
+#include <string>
+#include "Rock.h"
+#include "Paper.h"
+#include "Scissors.h"
+#include "Monkey.h"
+#include "Robot.h"
+#include "Pirate.h"
+#include "Ninja.h"
+#include "Zombie.h"
 
 Move* Human::makeMove() {
     std::string playerMove;
@@ -16,6 +25,5 @@ Move* Human::makeMove() {
     if (playerMove == "Ninja") return new Ninja();
     if (playerMove == "Zombie") return new Zombie();
     
-    std::cout << "Invalid move! Defaulting to Rock.\n";
     return new Rock();
 }
