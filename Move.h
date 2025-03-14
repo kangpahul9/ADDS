@@ -16,4 +16,12 @@ public:
     virtual std::vector<std::string> getBeatsList() = 0;
     bool winCheck(std::vector<std::string> beatsList, Move *other);
 };
+
+
+
+
+
+
+    
+
 #endif
