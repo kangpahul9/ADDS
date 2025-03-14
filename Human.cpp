@@ -1,17 +1,13 @@
 #include "Human.h"
 #include "Move.h"
-#include <iostream>
-#include <algorithm>
 
-Human::Human(std::string name) : name(name) {}  // Define Constructor
+Human::Human(std::string name) : name(name) {}
 
 Move* Human::makeMove() {
     std::string choice;
     while (true) {
         std::cout << "Enter move: ";
         std::cin >> choice;
-        
-        // Convert to lowercase for case-insensitive comparison
         std::transform(choice.begin(), choice.end(), choice.begin(), ::tolower);
 
         if (choice == "rock") return new Rock();

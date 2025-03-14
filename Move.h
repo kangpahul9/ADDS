@@ -10,59 +10,55 @@ public:
     virtual ~Move() {} // Virtual destructor
 };
 
+// Rock Class
 class Rock : public Move {
 public:
-    Rock();
-    std::string getName() const override;
+    std::string getName() const override { return "Rock"; }
     bool beats(const Move* other) const override;
 };
 
+// Paper Class
 class Paper : public Move {
 public:
-    Paper();
-    std::string getName() const override;
+    std::string getName() const override { return "Paper"; }
     bool beats(const Move* other) const override;
 };
 
+// Scissors Class
 class Scissors : public Move {
 public:
-    Scissors();
-    std::string getName() const override;
+    std::string getName() const override { return "Scissors"; }
     bool beats(const Move* other) const override;
 };
 
+// Additional Moves
 class Robot : public Move {
 public:
-    Robot();
-    std::string getName() const override;
+    std::string getName() const override { return "Robot"; }
     bool beats(const Move* other) const override;
 };
 
 class Monkey : public Move {
 public:
-    Monkey();
-    std::string getName() const override;
+    std::string getName() const override { return "Monkey"; }
     bool beats(const Move* other) const override;
 };
 
 class Pirate : public Move {
 public:
-    Pirate();
-    std::string getName() const override;
+    std::string getName() const override { return "Pirate"; }
     bool beats(const Move* other) const override;
 };
 
 class Ninja : public Move {
 public:
-    Ninja();
-    std::string getName() const override;
+    std::string getName() const override { return "Ninja"; }
     bool beats(const Move* other) const override;
 };
 
 class Zombie : public Move {
 public:
-    Zombie();
-    std::string getName() const override;
+    std::string getName() const override { return "Zombie"; }
     bool beats(const Move* other) const override;
 };
 

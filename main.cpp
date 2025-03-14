@@ -1,22 +1,19 @@
 #include "Human.h"
 #include "Computer.h"
 #include "Referee.h"
-#include "Move.h"
 #include <iostream>
 
-Referee referee;  // Global referee instance
-
 int main() {
-    Human player1("Mei");
+    Human player1("You");
     Computer player2;
+    Referee referee;
 
-    Player* winner = referee.refGame(&player1, &player2);  // Only pass two arguments
+    Player* winner = referee.refGame(&player1, &player2);
 
     if (winner) {
-        std::cout << winner->getName() << " Wins." << std::endl;
+        std::cout << winner->getName() << " wins!\n";
     } else {
-        std::cout << "It's a Tie." << std::endl;
+        std::cout << "It's a tie!\n";
     }
-
     return 0;
 }
