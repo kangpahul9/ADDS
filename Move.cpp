@@ -34,7 +34,7 @@ std::string Zombie::getName() {
     return name;
 }
 bool Zombie::beats(Move* other){
-    if(other->getName()=="Pirate"||other->getName()=="Ninja"){
+    if(other->getName()=="Pirate"||other->getName()=="Monkey"){
         return true;
     }
     return false;
@@ -44,7 +44,7 @@ std::string Pirate::getName() {
     return name;
 }
 bool Pirate::beats(Move* other){
-    if(other->getName()=="Robot"||other->getName()=="Zombie"){
+    if(other->getName()=="Robot"||other->getName()=="Monkey"){
         return true;
     }
     return false;
@@ -64,7 +64,7 @@ std::string Robot::getName() {
     return name;
 }
 bool Robot::beats(Move* other){
-    if(other->getName()=="Rock"||other->getName()=="Scissors"){
+    if(other->getName()=="Ninja"||other->getName()=="Zombie"){
         return true;
     }
     return false;
@@ -74,7 +74,7 @@ std::string Monkey::getName() {
     return name;
 }
 bool Monkey::beats(Move* other){
-    if(other->getName()=="Robot"){
+    if(other->getName()=="Robot" || other->getName()=="Ninja"){
         return true;
     }
     return false;
