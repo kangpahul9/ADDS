@@ -6,7 +6,7 @@ Move* Human::makeMove() {
     std::string playerMove;
     std::cout << "Enter Move: ";
     std::cin >> playerMove;
-    std::cout<< getName()<< " Computer ";
+    
     if (playerMove == "Rock") return new Rock();
     if (playerMove == "Paper") return new Paper();
     if (playerMove == "Scissors") return new Scissors();

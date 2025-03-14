@@ -2,68 +2,71 @@
 #define MOVE_H
 
 #include <string>
-#include<iostream>
-class Move {
+#include <iostream>
+class Move
+{
+protected:
+    std::string name;
+
 public:
     virtual ~Move() {}
-    virtual std::string getName() const = 0;
-    virtual bool beats(const Move* other) const = 0;
+    virtual std::string getName() = 0;
+    virtual bool beats(Move *other) = 0;
 };
 
-class Rock : public Move {
+class Rock : public Move
+{
 public:
-    Rock(){std::cout<<"Rock ";}
-    std::string getName() const override;
-    bool beats(const Move* other) const override;
+    Rock() { name = "Rock"; }
+    std::string getName();
+    bool beats(Move *other);
 };
-
-class Paper : public Move {
+class Paper : public Move
+{
 public:
-Paper(){std::cout<<"Paper ";}
-    std::string getName() const override;
-    bool beats(const Move* other) const override;
+    Paper() { name = "Paper"; }
+    std::string getName();
+    bool beats(Move *other);
 };
-
-class Scissors : public Move {
+class Scissors : public Move
+{
 public:
-Scissors(){std::cout<<"Scissors ";}
-    std::string getName() const override;
-    bool beats(const Move* other) const override;
+    Scissors() { name = "Scissors"; }
+    std::string getName();
+    bool beats(Move *other);
 };
-
-class Monkey : public Move {
+class Zombie : public Move
+{
 public:
-Monkey(){std::cout<<"Monkey ";}
-    std::string getName() const override;
-    bool beats(const Move* other) const override;
+    Zombie() { name = "Zombie"; }
+    std::string getName();
+    bool beats(Move *other);
 };
-
+class Pirate : public Move
+{
+public:
+    Pirate() { name = "Pirate"; }
+    std::string getName();
+    bool beats(Move *other);
+};
+class Ninja : public Move
+{
+public:
+    Ninja() { name = "Ninja"; }
+    std::string getName();
+    bool beats(Move *other);
+};
 class Robot : public Move {
-public:
-Robot(){std::cout<<"Robot ";}
-    std::string getName() const override;
-    bool beats(const Move* other) const override;
-};
-
-class Pirate : public Move {
-public:
-Pirate(){std::cout<<"Pirate ";}
-    std::string getName() const override;
-    bool beats(const Move* other) const override;
-};
-
-class Ninja : public Move {
-public:
-Ninja(){std::cout<<"Ninja ";}
-    std::string getName() const override;
-    bool beats(const Move* other) const override;
-};
-
-class Zombie : public Move {
-public:
-Zombie(){std::cout<<"Zombie ";}
-    std::string getName() const override;
-    bool beats(const Move* other) const override;
-};
+    public:
+        Robot() { name = "Robot"; }
+        std::string getName() ;
+        bool beats( Move* other);
+    };
+    class Monkey : public Move {
+        public:
+            Monkey() { name = "Monkey"; }
+            std::string getName() ;
+            bool beats( Move* other);
+        };
 
 #endif

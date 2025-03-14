@@ -6,7 +6,7 @@
 
 class Player {
 public:
-    virtual ~Player() {}
+    Player() {}
     virtual Move* makeMove() = 0;  
     virtual std::string getName() = 0; 
 };

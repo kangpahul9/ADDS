@@ -1,41 +1,81 @@
 #include "Move.h"
 
-std::string Rock::getName() const { return "Rock"; }
-bool Rock::beats(const Move* other) const {
-    return other->getName() == "Scissors" || other->getName() == "Zombie";
+std::string Rock::getName() {
+    return name;
+}
+bool Rock::beats(Move* other){
+    if(other->getName()=="Scissors"){
+        return true;
+    }
+    return false;
 }
 
-std::string Paper::getName() const { return "Paper"; }
-bool Paper::beats(const Move* other) const {
-    return other->getName() == "Rock" || other->getName() == "Robot";
+std::string Paper::getName() {
+    return name;
+}
+bool Paper::beats(Move* other){
+    if(other->getName()=="Rock"){
+        return true;
+    }
+    return false;
 }
 
-std::string Scissors::getName() const { return "Scissors"; }
-bool Scissors::beats(const Move* other) const {
-    return other->getName() == "Paper" || other->getName() == "Pirate";
+std::string Scissors::getName() {
+    return name;
+}
+bool Scissors::beats(Move* other){
+    if(other->getName()=="Paper"){
+        return true;
+    }
+    return false;
 }
 
-std::string Monkey::getName() const { return "Monkey"; }
-bool Monkey::beats(const Move* other) const {
-    return other->getName() == "Robot" || other->getName() == "Ninja";
+std::string Zombie::getName() {
+    return name;
+}
+bool Zombie::beats(Move* other){
+    if(other->getName()=="Pirate"||other->getName()=="Ninja"){
+        return true;
+    }
+    return false;
 }
 
-std::string Robot::getName() const { return "Robot"; }
-bool Robot::beats(const Move* other) const {
-    return other->getName() == "Scissors" || other->getName() == "Zombie";
+std::string Pirate::getName() {
+    return name;
+}
+bool Pirate::beats(Move* other){
+    if(other->getName()=="Robot"||other->getName()=="Zombie"){
+        return true;
+    }
+    return false;
 }
 
-std::string Pirate::getName() const { return "Pirate"; }
-bool Pirate::beats(const Move* other) const {
-    return other->getName() == "Monkey" || other->getName() == "Rock";
+std::string Ninja::getName() {
+    return name;
+}
+bool Ninja::beats(Move* other){
+    if(other->getName()=="Zombie"||other->getName()=="Pirate"){
+        return true;
+    }
+    return false;
 }
 
-std::string Ninja::getName() const { return "Ninja"; }
-bool Ninja::beats(const Move* other) const {
-    return other->getName() == "Pirate" || other->getName() == "Paper";
+std::string Robot::getName() {
+    return name;
+}
+bool Robot::beats(Move* other){
+    if(other->getName()=="Rock"||other->getName()=="Scissors"){
+        return true;
+    }
+    return false;
 }
 
-std::string Zombie::getName() const { return "Zombie"; }
-bool Zombie::beats(const Move* other) const {
-    return other->getName() == "Ninja" || other->getName() == "Monkey";
+std::string Monkey::getName() {
+    return name;
+}
+bool Monkey::beats(Move* other){
+    if(other->getName()=="Robot"){
+        return true;
+    }
+    return false;
 }
