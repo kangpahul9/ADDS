@@ -4,16 +4,14 @@
 #include "Player.h"
 #include <cstdlib>
 #include <ctime>
-
 class Computer : public Player {
-private:
-    std::string name;
-public:
-    Computer(std::string playerName) : name(playerName) {
-        std::srand(std::time(0));
-    }
-    Move* makeMove() override;
-    std::string getName() override { return name; }
-};
-
+    public:
+        Computer() : name("Computer") {} // Default constructor
+        Computer(std::string playerName) : name(playerName) {} // Parameterized constructor
+        std::string getName() override { return name; }
+        Move* makeMove() override; // Implement in Computer.cpp
+    
+    private:
+        std::string name;
+    };
 #endif

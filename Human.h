@@ -5,12 +5,16 @@
 #include <iostream>
 
 class Human : public Player {
-private:
-    std::string name;
-public:
-    Human(std::string playerName) : name(playerName) {}
-    Move* makeMove() override;
-    std::string getName() override { return name; }
-};
+    public:
+        Human() : name("Mei") {} // Default constructor
+        Human(std::string playerName) : name(playerName) {} // Parameterized constructor
+        std::string getName() override { return name; }
+        Move* makeMove() override; // Implement in Human.cpp
+    
+    private:
+        std::string name;
+    };
 
 #endif
+
+    
