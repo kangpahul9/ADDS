@@ -1,16 +1,20 @@
 #include "Referee.h"
 
-Referee::Referee() {}
+Referee::Referee() : lastHumanMove(nullptr) {}
+
+Move* Referee::getLastHumanMove() {
+    return lastHumanMove;
+}
 
 Player* Referee::refGame(Player* player1, Player* player2) {
-    Move* move1 = player1->makeMove();
-    Move* move2 = player2->makeMove();
+    lastHumanMove = player1->makeMove();  // Store human move
+    Move* move2 = player2->makeMove();    // Let the computer make a move
 
-    if (move1->beats(move2)) {
+    if (lastHumanMove->beats(move2)) {
         return player1;
-    } else if (move2->beats(move1)) {
+    } else if (move2->beats(lastHumanMove)) {
         return player2;
     } else {
-        return nullptr;
+        return nullptr;  // Tie
     }
 }
