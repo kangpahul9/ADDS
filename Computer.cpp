@@ -3,5 +3,5 @@
 #include "Rock.h"
 
 Move* Computer::makeMove() {
-    return new Rock(); // Default case
+    return new Rock(); 
 }

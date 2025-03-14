@@ -6,10 +6,10 @@
 
 class Human : public Player {
     public:
-        Human() : name("Human") {} // Default constructor
-        Human(std::string playerName) : name(playerName) {} // Parameterized constructor
+        Human() : name("Human") {} 
+        Human(std::string playerName) : name(playerName) {} 
         std::string getName()  { return name; }
-        Move* makeMove() ; // Implement in Human.cpp
+        Move* makeMove() ; 
     
     private:
         std::string name;

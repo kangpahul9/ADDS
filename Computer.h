@@ -6,10 +6,10 @@
 #include <ctime>
 class Computer : public Player {
     public:
-        Computer() : name("Computer") {} // Default constructor
-        Computer(std::string playerName) : name(playerName) {} // Parameterized constructor
+        Computer() : name("Computer") {} 
+        Computer(std::string playerName) : name(playerName) {}
         std::string getName() override { return name; }
-        Move* makeMove() override; // Implement in Computer.cpp
+        Move* makeMove() override; 
     
     private:
         std::string name;
