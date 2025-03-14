@@ -1,24 +1,21 @@
 #include "Human.h"
 #include "Move.h"
-
-Human::Human(std::string name) : name(name) {}
+#include <iostream>
 
 Move* Human::makeMove() {
-    std::string choice;
-    while (true) {
-        std::cout << "Enter move: ";
-        std::cin >> choice;
-        std::transform(choice.begin(), choice.end(), choice.begin(), ::tolower);
-
-        if (choice == "rock") return new Rock();
-        if (choice == "paper") return new Paper();
-        if (choice == "scissors") return new Scissors();
-        if (choice == "robot") return new Robot();
-        if (choice == "monkey") return new Monkey();
-        if (choice == "pirate") return new Pirate();
-        if (choice == "ninja") return new Ninja();
-        if (choice == "zombie") return new Zombie();
-
-        std::cout << "Invalid move. Try again." << std::endl;
-    }
+    std::string moveName;
+    std::cout << "Enter Move: ";
+    std::cin >> moveName;
+    
+    if (moveName == "Rock") return new Rock();
+    if (moveName == "Paper") return new Paper();
+    if (moveName == "Scissors") return new Scissors();
+    if (moveName == "Monkey") return new Monkey();
+    if (moveName == "Robot") return new Robot();
+    if (moveName == "Pirate") return new Pirate();
+    if (moveName == "Ninja") return new Ninja();
+    if (moveName == "Zombie") return new Zombie();
+    
+    std::cout << "Invalid move! Defaulting to Rock.\n";
+    return new Rock();
 }

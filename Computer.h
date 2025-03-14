@@ -3,12 +3,15 @@
 
 #include "Player.h"
 #include <cstdlib>
+#include <ctime>
 
 class Computer : public Player {
 private:
     std::string name;
 public:
-    Computer();
+    Computer(std::string playerName) : name(playerName) {
+        std::srand(std::time(0));
+    }
     Move* makeMove() override;
     std::string getName() override { return name; }
 };

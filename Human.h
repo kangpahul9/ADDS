@@ -3,13 +3,12 @@
 
 #include "Player.h"
 #include <iostream>
-#include <algorithm>
 
 class Human : public Player {
 private:
     std::string name;
 public:
-    Human(std::string name = "Human");
+    Human(std::string playerName) : name(playerName) {}
     Move* makeMove() override;
     std::string getName() override { return name; }
 };
