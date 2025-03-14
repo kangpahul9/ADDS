@@ -14,5 +14,6 @@ public:
     virtual ~Move() {}
     virtual std::string getName() = 0;
     virtual std::vector<std::string> getBeatsList() = 0;
+    bool winCheck(std::vector<std::string> beatsList, Move *other);
 };
 #endif
