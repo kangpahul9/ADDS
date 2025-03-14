@@ -5,16 +5,16 @@
 
 int main() {
     
-    Human human("Mei");
+    Human human;
     Computer computer;
     Referee referee;
     
     Player* winner = referee.refGame(&human, &computer);
     
     if (winner) {
-        std::cout << winner->getName() << " Wins" << std::endl;
+        std::cout << winner->getName();
     } else {
-        std::cout << "It's a draw!" << std::endl;
+        std::cout << "Tie" << std::endl;
     }
     
     return 0;

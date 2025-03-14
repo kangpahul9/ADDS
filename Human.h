@@ -6,7 +6,7 @@
 
 class Human : public Player {
     public:
-        Human() : name("Mei") {} // Default constructor
+        Human() : name("John Human") {} // Default constructor
         Human(std::string playerName) : name(playerName) {} // Parameterized constructor
         std::string getName() override { return name; }
         Move* makeMove() override; // Implement in Human.cpp

@@ -3,18 +3,18 @@
 #include <iostream>
 
 Move* Human::makeMove() {
-    std::string moveName;
+    std::string playerMove;
     std::cout << "Enter Move: ";
-    std::cin >> moveName;
-    
-    if (moveName == "Rock") return new Rock();
-    if (moveName == "Paper") return new Paper();
-    if (moveName == "Scissors") return new Scissors();
-    if (moveName == "Monkey") return new Monkey();
-    if (moveName == "Robot") return new Robot();
-    if (moveName == "Pirate") return new Pirate();
-    if (moveName == "Ninja") return new Ninja();
-    if (moveName == "Zombie") return new Zombie();
+    std::cin >> playerMove;
+    std::cout<< getName()<< " Computer ";
+    if (playerMove == "Rock") return new Rock();
+    if (playerMove == "Paper") return new Paper();
+    if (playerMove == "Scissors") return new Scissors();
+    if (playerMove == "Monkey") return new Monkey();
+    if (playerMove == "Robot") return new Robot();
+    if (playerMove == "Pirate") return new Pirate();
+    if (playerMove == "Ninja") return new Ninja();
+    if (playerMove == "Zombie") return new Zombie();
     
     std::cout << "Invalid move! Defaulting to Rock.\n";
     return new Rock();
