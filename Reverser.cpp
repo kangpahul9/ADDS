@@ -3,7 +3,7 @@ std::string Reverser::reverseString(std::string characters)
 {
     if (characters.length() == 0)
     {
-        return "ERROR"
+        return "ERROR";
     }
     
     std::string reversed = "";

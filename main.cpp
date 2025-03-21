@@ -1,13 +1,12 @@
 #include<iostream>
 #include"Truckloads.h"
 #include"Reverser.h"
+#include"EfficientTruckloads.h"
 int main()
 {
-    // Truckloads truckloads(1024,4);
-    // int a = truckloads.numTrucks(truckloads.getNumCrates(), truckloads.getLoadSize());
-    // std::cout << "The number of crates is: " << truckloads.getNumCrates() << std::endl;
-    // std::cout << "The load size is: " << truckloads.getLoadSize() << std::endl;
-    // std::cout << "The number of trucks required is: " << a << std::endl;
+    EfficientTruckloads truckloads;
+    int numTrucks = truckloads.numTrucks(14, 3);
+    std::cout << "The number of trucks is: " << numTrucks << std::endl;
     Reverser reverser;
     std::string reversedString = reverser.reverseString("Hello");
     std::cout << "The reversed string is: " << reversedString << std::endl;
