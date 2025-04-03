@@ -5,8 +5,8 @@ using namespace std;
 
 int main() {
     Finder finder;
-    string s1 = "4634554567";  // Example string 1
-    string s2 = "45689";       // Example string 2
+    string s1 = "734658732465";  // Example string 1
+    string s2 = "463";       // Example string 2
 
     vector<int> result = finder.findSubstrings(s1, s2);
 
