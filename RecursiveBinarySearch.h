@@ -5,7 +5,7 @@
 
 class RecursiveBinarySearch {
 public:
-    bool search(std::vector<int> list, int target);
+    bool search(std::vector<int> list, int target); 
 
 private:
     bool binarySearch(const std::vector<int>& list, int target, int left, int right);

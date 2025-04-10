@@ -5,11 +5,11 @@
 
 class QuickSort : public Sort {
 public:
-    std::vector<int> sort(std::vector<int> list) override;
+    std::vector<int> sort(std::vector<int> list);
 
 private:
     void quickSort(std::vector<int>& list, int low, int high);
-    int partition(std::vector<int>& list, int low, int high);
+    int partition(std::vector<int>& list, int low, int high); 
 };
 
 #endif
