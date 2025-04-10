@@ -13,16 +13,16 @@ int main() {
     int num;
 
     while (ss >> num) {
-        numbers.push_back(num);
+        numbers.push_back(num); 
     }
 
     QuickSort sorter;
     RecursiveBinarySearch searcher;
 
-    std::vector<int> sorted = sorter.sort(numbers);
-    bool found = searcher.search(sorted, 1);
+    std::vector<int> sorted = sorter.sort(numbers); 
+    bool found = searcher.search(sorted, 1); 
 
-    std::cout << (found ? "true" : "false");
+    std::cout << (found ? "true" : "false"); 
     for (int n : sorted) {
         std::cout << " " << n;
     }
