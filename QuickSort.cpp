@@ -6,24 +6,17 @@ std::vector<int> QuickSort::sort(std::vector<int> list) {
 }
 
 void QuickSort::quickSort(std::vector<int>& list, int low, int high) {
-    std::vector<std::pair<int, int>> stack;
-    stack.push_back({low, high});
-
-    while (!stack.empty()) {
-        auto [l, h] = stack.back();
-        stack.pop_back();
-
-        if (l < h) {
-            int p = partition(list, l, h);
-            stack.push_back({l, p - 1});
-            stack.push_back({p + 1, h});
-        }
+    if (low < high) {
+        int pivotIndex = partition(list, low, high);
+        quickSort(list, low, pivotIndex - 1);
+        quickSort(list, pivotIndex + 1, high);
     }
 }
 
 int QuickSort::partition(std::vector<int>& list, int low, int high) {
-    int pivot = list[low + 2];
-    std::swap(list[low + 2], list[high]);
+    int pivotIndex = (high - low >= 2) ? low + 2 : high; // 3rd element as pivot if possible
+    int pivot = list[pivotIndex];
+    std::swap(list[pivotIndex], list[high]);
 
     int i = low - 1;
     for (int j = low; j < high; ++j) {
@@ -32,7 +25,6 @@ int QuickSort::partition(std::vector<int>& list, int low, int high) {
             std::swap(list[i], list[j]);
         }
     }
-
     std::swap(list[i + 1], list[high]);
     return i + 1;
 }
