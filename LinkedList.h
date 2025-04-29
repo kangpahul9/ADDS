@@ -12,13 +12,14 @@ public:
     LinkedList();                             
     LinkedList(int* array, int len);          
     ~LinkedList();                            
-    void insertNodeAtPosition(int position, int value); 
-    bool deleteNodeAtPosition(int position);           
-    int getValueAtPosition(int position);               
-    int findFirstMatch(int target);                    
-    void printLinkedList() const;                     
+    void insertPosition(int pos, int newNum); 
+    bool deletePosition(int pos);            
+    int get(int pos);                         
+    int search(int target);                   
+    void printList() const;                   
 };
 
 #endif 
+
 
 

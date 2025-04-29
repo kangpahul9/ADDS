@@ -7,10 +7,10 @@ private:
     Node* link;         
 
 public:
-    Node(int val);     
+    Node(int val);      
     int getData() const; 
-    Node* getLink() const;
-    void setLink(Node* newLink);
+    Node* getLink() const; 
+    void setLink(Node* newLink); 
 };
 
-#endif // NODE_H
+#endif 
