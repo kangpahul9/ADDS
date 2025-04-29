@@ -4,20 +4,21 @@
 #include "Node.h"
 #include <limits>
 
-class LinkedList
-{
+class LinkedList {
 private:
-    Node *head;
+    Node* head; 
 
 public:
-    LinkedList();
-    LinkedList(int *array, int length);
-    ~LinkedList();
-    void insertAtPosition(int position, int value);
-    bool deleteAtPosition(int position);
-    int getValueAt(int position);
-    int findFirstOccurrence(int target);
-    void displayList() const;
+    LinkedList();                             
+    LinkedList(int* array, int len);          
+    ~LinkedList();                            
+    void insertNodeAtPosition(int position, int value); 
+    bool deleteNodeAtPosition(int position);           
+    int getValueAtPosition(int position);               
+    int findFirstMatch(int target);                    
+    void printLinkedList() const;                     
 };
 
-#endif
+#endif 
+
+
