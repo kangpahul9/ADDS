@@ -2,11 +2,11 @@
 #include <algorithm> 
 #include <iostream>
 
-bigNumCalc::bigNumCalc() {}
+BigNumCalc::BigNumCalc() {}
 
-bigNumCalc::~bigNumCalc() {}
+BigNumCalc::~BigNumCalc() {}
 
-std::list<int> bigNumCalc::buildBigNum(std::string numString) {
+std::list<int> BigNumCalc::buildBigNum(std::string numString) {
     std::list<int> result;
     for (char c : numString) {
         if (isdigit(c)) {
@@ -16,7 +16,7 @@ std::list<int> bigNumCalc::buildBigNum(std::string numString) {
     return result;
 }
 
-std::list<int> bigNumCalc::add(std::list<int> num1, std::list<int> num2) {
+std::list<int> BigNumCalc::add(std::list<int> num1, std::list<int> num2) {
     std::list<int> result;
     auto it1 = num1.rbegin();
     auto it2 = num2.rbegin();
@@ -36,7 +36,7 @@ std::list<int> bigNumCalc::add(std::list<int> num1, std::list<int> num2) {
     return result;
 }
 
-std::list<int> bigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
+std::list<int> BigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
     std::list<int> result;
     auto it1 = num1.rbegin();
     auto it2 = num2.rbegin();
@@ -60,7 +60,7 @@ std::list<int> bigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
         if (it2 != num2.rend()) ++it2;
     }
 
-    
+    // Remove leading zeros
     while (result.size() > 1 && result.front() == 0) {
         result.pop_front();
     }
@@ -68,7 +68,7 @@ std::list<int> bigNumCalc::sub(std::list<int> num1, std::list<int> num2) {
     return result;
 }
 
-std::list<int> bigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
+std::list<int> BigNumCalc::mul(std::list<int> num1, std::list<int> num2) {
     std::list<int> result;
     if (num2.size() != 1) {
         return result;
