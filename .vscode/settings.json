@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "vector": "cpp",
-        "string": "cpp"
+        "string": "cpp",
+        "list": "cpp",
+        "__locale": "cpp",
+        "chrono": "cpp",
+        "functional": "cpp"
     }
 }
