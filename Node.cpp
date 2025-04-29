@@ -1,15 +1,15 @@
 #include "Node.h"
 
-Node::Node(int val) : data(val), link(nullptr) {}
+Node::Node(int val) : value(val), next(nullptr) {} 
 
-int Node::getData() const {
-    return data;
+int Node::getValue() const {
+    return value;
 }
 
-Node* Node::getLink() const {
-    return link;
+Node* Node::getNext() const {
+    return next; 
 }
 
-void Node::setLink(Node* newLink) {
-    link = newLink;
+void Node::setNext(Node* nextNode) {
+    next = nextNode; 
 }
