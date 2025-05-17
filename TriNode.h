@@ -1,12 +1,12 @@
 #ifndef TRINODE_H
 #define TRINODE_H
 
-#include <vector>  // for std::vector
+#include <vector> 
 
 class TriNode {
 public:
     TriNode();
-    TriNode(int numChildren); // number of children
+    TriNode(int numChildren);
 
     bool isEnd;
     int routerNumber;

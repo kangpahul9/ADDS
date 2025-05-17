@@ -20,7 +20,6 @@ int PrefixMatcher::selectRouter(const std::string& networkAddress) {
         cur = cur->children[index];
     }
 
-    // Final check if current node isEnd
     if (cur && cur->isEnd) {
         bestMatch = cur->routerNumber;
     }
@@ -46,5 +45,5 @@ void PrefixMatcher::insert(const std::string& address, int routerNumber) {
 }
 
 PrefixMatcher::~PrefixMatcher() {
-    delete root; // Recursively deletes the trie due to TriNode destructor
+    delete root; 
 }

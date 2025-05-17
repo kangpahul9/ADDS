@@ -7,6 +7,6 @@ TriNode::TriNode(int numChildren)
 
 TriNode::~TriNode() {
     for (TriNode* child : children) {
-        delete child; // delete is safe even if child is nullptr
+        delete child;
     }
 }

@@ -9,7 +9,7 @@ std::vector<std::string> Autocomplete::getSuggestions(const std::string& partial
     for (char c : partialWord) {
         int index = c - 'a';
         if (cur->children[index] == nullptr) {
-            return suggestions; // No suggestions if prefix not found
+            return suggestions; 
         }
         cur = cur->children[index];
     }
@@ -46,5 +46,5 @@ void Autocomplete::insert(const std::string& word) {
 }
 
 Autocomplete::~Autocomplete() {
-    delete root; // TriNode destructor will clean up recursively
+    delete root; 
 }

@@ -9,8 +9,8 @@ class Autocomplete {
 public:
     Autocomplete();
 
-    std::vector<std::string> getSuggestions(const std::string& partialWord);  // Return known words starting with partialWord
-    void insert(const std::string& word); // Add a word to the known words
+    std::vector<std::string> getSuggestions(const std::string& partialWord);  
+    void insert(const std::string& word); 
 
     ~Autocomplete();
 
@@ -19,4 +19,4 @@ private:
     void getSuggestionsHelper(TriNode* cur, const std::string& prefix, std::vector<std::string>& suggestions);
 };
 
-#endif // AUTOCOMPLETE_H
+#endif
