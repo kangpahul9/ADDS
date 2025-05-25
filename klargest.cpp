@@ -2,15 +2,15 @@
 #include <queue>
 
 int kth_largest(std::vector<int> values, int k) {
-    std::priority_queue<int, std::vector<int>, std::greater<int>> newHeap;
+    std::priority_queue<int, std::vector<int>, std::greater<int>> minHeap;
     
     for (int value : values) {
-        newHeap.push(value);
+        minHeap.push(value);
         
-        if (newHeap.size() > k) {  
-            newHeap.pop();
+        if (minHeap.size() > k) {  
+            minHeap.pop();
         }
     }
     
-    return newHeap.top();   
+    return minHeap.top();
 }
