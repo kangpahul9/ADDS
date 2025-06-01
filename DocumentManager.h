@@ -19,4 +19,4 @@ class DocumentManager {
         void returnDocument(int docid, int patronID);
 };
 
-#endif;
+#endif
